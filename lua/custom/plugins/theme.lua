@@ -1,4 +1,3 @@
--- Custom theme Nord
 return {
   'arcticicestudio/nord-vim',
   priority = 999,
@@ -6,4 +5,3 @@ return {
     vim.cmd.colorscheme 'nord'
   end,
 }
--- return {}
