@@ -5,6 +5,9 @@ return {
   opts = {
     window = {
       width = 160,
+      opts = {
+        laststatus = 3,
+      },
     },
   },
 }
