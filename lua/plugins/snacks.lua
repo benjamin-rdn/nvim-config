@@ -1,3 +1,9 @@
+---@diagnostic disable: undefined-global
+-- If in vscode
+if vim.g.vscode then
+  return {}
+end
+
 return {
   'folke/snacks.nvim',
   priority = 1000,
@@ -5,22 +11,22 @@ return {
   opts = {
     dashboard = { enabled = false },
     dim = { enabled = false },
-    indent = { enabled = false },
     scroll = { enabled = false },
-    statuscolumn = { enabled = false },
+    statuscolumn = { enabled = true },
     lazygit = { enabled = false },
     picker = { enabled = false },
+    indent = { enabled = true },
     bigfile = { enabled = true },
     input = { enabled = true },
+    quickfile = { enabled = true },
+    words = { enabled = true },
     notifier = {
       enabled = true,
-      timeout = 3000,
+      timeout = 5000,
       width = { min = 60 },
       padding = true,
       margin = { top = 1, right = 1, bottom = 1, left = 1 },
     },
-    quickfile = { enabled = true },
-    words = { enabled = true },
     styles = {
       notification = {},
     },
@@ -49,9 +55,9 @@ return {
     {
       '<leader>zz',
       function()
-        Snacks.zen {
+        Snacks.zen({
           dim = { enabled = false },
-        }
+        })
       end,
       desc = 'Toggle Zen Mode',
     },
