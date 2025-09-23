@@ -18,6 +18,9 @@ vim.keymap.set({ 'n', 'i' }, '<D-s>', '<cmd>w<CR>')
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Pin dependencies in package.json
+vim.keymap.set('n', '<leader>^', '<cmd>%s/"^/"/g<CR>', { desc = 'Pin dependencies in package.json' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 

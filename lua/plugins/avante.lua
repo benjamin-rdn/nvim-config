@@ -8,9 +8,24 @@ return {
   lazy = false,
   version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
   opts = {
+    -- provider = "lmstudio",
+    -- vendors = {
+    -- 	lmstudio = {
+    -- 		__inherited_from = "openai",
+    -- 		api_key_name = "",
+    -- 		endpoint = "http://127.0.0.1:1234/v1",
+    -- 		model = "deepseek-coder-v2-lite-instruct-mlx",
+    -- 	},
+    -- },
+    --
     -- add any opts here
     -- for example
     provider = 'copilot',
+    providers = {
+      copilot = {
+        model = 'gpt-4.1-2025-04-14',
+      },
+    },
     -- openai = {
     --   endpoint = "https://api.openai.com/v1",
     --   model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
