@@ -36,3 +36,7 @@ vim.api.nvim_set_keymap('i', '<M-;>', 'copilot#Accept("\\<CR>")', { silent = tru
 vim.keymap.set('i', '<C-j>', 'copilot#Previous()', { expr = true, desc = 'Previous copilot suggestion' })
 vim.keymap.set('i', '<C-k>', 'copilot#Next()', { expr = true, desc = 'Next copilot suggestion' })
 vim.g.copilot_no_tab_map = true
+
+-- Treesitter keymaps
+vim.keymap.set('n', '<leader>ti', '<cmd>InspectTree<CR>', { desc = '[T]reesitter [I]nspect tree' })
+vim.keymap.set('n', '<leader>tu', '<cmd>TSUpdate<CR>', { desc = '[T]reesitter [U]pdate parsers' })
