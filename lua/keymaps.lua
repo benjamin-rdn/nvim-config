@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>^', '<cmd>%s/"^/"/g<CR>', { desc = 'Pin dependencie
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Open diagnostic floating [K]uickfix list' })
 
 -- Navigation through splits
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
