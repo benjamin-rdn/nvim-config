@@ -57,6 +57,9 @@ require('lazy').setup({
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
+
+      -- Must load before lspconfig so vim globals are recognized by lua_ls
+      'folke/lazydev.nvim',
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -234,11 +237,14 @@ require('lazy').setup({
           -- capabilities = {},
           settings = {
             Lua = {
+              runtime = { version = 'LuaJIT' },
+              diagnostics = {
+                globals = { 'vim' },
+              },
+              workspace = { checkThirdParty = false },
               completion = {
                 callSnippet = 'Replace',
               },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
